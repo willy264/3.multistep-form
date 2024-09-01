@@ -20,28 +20,28 @@
         </div>
         <div class="sidebar-container">
           <div class="sidebar-contain">
-            <div class="circle">1</div>
+            <div class="circle" id="circleOne">1</div>
             <div class="text">
               <span>step 1</span>
               <p>your info</p>
             </div>
           </div>
           <div class="sidebar-contain">
-            <div class="circle">2</div>
+            <div class="circle" id="circleTwo">2</div>
             <div class="text">
               <span>step 2</span>
               <p>select plan</p>
             </div>
           </div>
           <div class="sidebar-contain">
-            <div class="circle">3</div>
+            <div class="circle" id="circleThree">3</div>
             <div class="text">
               <span>step 3</span>
               <p>add-ons</p>
             </div>
           </div>  
           <div class="sidebar-contain">
-            <div class="circle">4</div>
+            <div class="circle"  id="circleFour">4</div>
             <div class="text">
               <span>step 4</span>
               <p>summary</p>
@@ -62,14 +62,14 @@
               <label for="name">Name</label>
               <p class="error nameError"></p>
             </div>
-            <input type="text" placeholder="e.g. Stephen King" id="name" required>            
+            <input type="text" placeholder="e.g. Stephen King" id="name" class="named" required>            
           </div>
           <div class="nameInput">
             <div class="label">
               <label for="email">Email Address</label>
               <p class="error emailError"></p>
             </div>
-            <input type="text" placeholder="e.g. stephenking@lorem.com" id="email" required/>
+            <input type="text" placeholder="e.g. stephenking@lorem.com" id="email" class="emailed"/>
           </div>
           <div class="nameInput">
             <div class="label">
@@ -80,7 +80,7 @@
           </div>
         </form>
         <div class="footer">
-          <button type="submit" class="next stepTwo">Next Step</button>
+          <button type="submit" class="next" id="btnOne">Next Step</button>
         </div>
       </div>
 
@@ -123,8 +123,8 @@
           </div>  
         </div>
         <div class="footer">
-          <button class="previous" type="button">Go Back</button>
-          <button class="next" type="submit">Next Step</button>
+          <button class="previous" type="button" id="prevTwo">Go Back</button>
+          <button class="next" type="submit" id="btnTwo">Next Step</button>
         </div>
       </div>
 
@@ -160,8 +160,8 @@
           </div>
         </div>
         <div class="footer">
-          <button class="previous" type="button">Go Back</button>
-          <button class="next" type="submit">Next Step</button>
+          <button class="previous" type="button" id="prevThree">Go Back</button>
+          <button class="next" type="submit" id="btnThree">Next Step</button>
         </div>
       </div>
       <div class="step-form step4">
@@ -197,8 +197,8 @@
           </div>
         </div>
         <div class="footer">
-          <button class="previous" type="button">Go Back</button>
-          <button class="next" type="submit">Confirm</button>
+          <button class="previous" type="button" id="prevFour">Go Back</button>
+          <button class="next" type="submit" id="btnFour">Confirm</button>
         </div>
       </div>
       <div class="step-form step5">
