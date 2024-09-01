@@ -210,8 +210,12 @@ form .error {
   border-radius: 7px;
   cursor: pointer;
 }
-#planYear {
+.plan-cards#planYear {
   display: none;
+  height: 200px;
+}
+.plan-cards#planYear .card {
+  height: 200px;
 }
 .plan-cards .selected {
   border: 2px solid var(--Purplish-blue);
@@ -229,6 +233,9 @@ form .error {
 }
 .plan-texted .plan-price {
   color: var(--Cool-gray);
+}
+.plan-texted .free {
+  color: var(--Light-Marine-blue);
 }
 .on-off {
   display: flex;
@@ -472,7 +479,8 @@ input:checked + .boot::before {
     background-color: var(--White);
   } */
   .container {
-    top: 25%;
+    /* min-height: 650px; */
+    margin-top: 150px;
     max-width: fit-content;
     background-color: white;
   }
@@ -501,6 +509,13 @@ input:checked + .boot::before {
     display: none;
   }
 
+  .step2 {
+    grid-template-rows: auto;
+  }
+  .step2 .cards {
+    grid-template-rows: 300px .1fr;
+    gap: 50px;
+  }
   .plan-cards {
     margin-top: 20px;
     flex-direction: column;
@@ -508,9 +523,10 @@ input:checked + .boot::before {
   }
   .plan-cards .card {
     width: 100%;
-    height: fit-content;
+    height: 100px;
     flex-direction: row;
     justify-content: start;
+    align-items: center;
     gap: 20px;
     padding: 10px;
   }
@@ -519,6 +535,7 @@ input:checked + .boot::before {
     padding: 15px;
     background-color: var(--Alabaster);
   }
+
 
   .step1 {
     width: 100%;

@@ -98,21 +98,21 @@
 
         <div class="cards">
           <div class="plan-cards" id="planMonth">
-            <div class="card selected">
+            <div class="card" id="cardOne">
               <img src="images/icon-arcade.svg" alt="">
               <div class="plan-texted">
                 <p class="plan-text">Arcade</p>
                 <span class="plan-price">$9/mo</span>
               </div>
             </div>
-            <div class="card">
+            <div class="card" id="cardTwo">
               <img src="images/icon-advanced.svg" alt="">
               <div class="plan-texted">
                 <p class="plan-text">Advanced</p>
                 <span class="plan-price">$12/mo</span>
               </div>
             </div>
-            <div class="card">
+            <div class="card" id="cardThree">
               <img src="images/icon-pro.svg" alt="">
               <div class="plan-texted">
                 <p class="plan-text">Pro</p>
@@ -121,7 +121,7 @@
             </div>
           </div>
           <div class="plan-cards" id="planYear">
-            <div class="card selected">
+            <div class="card" id="cardFour">
               <img src="images/icon-arcade.svg" alt="">
               <div class="plan-texted">
                 <p class="plan-text">Arcade</p>
@@ -129,7 +129,7 @@
                 <label class="free">2 months free</label>
               </div>
             </div>
-            <div class="card">
+            <div class="card" id="cardFive">
               <img src="images/icon-advanced.svg" alt="">
               <div class="plan-texted">
                 <p class="plan-text">Advanced</p>
@@ -137,7 +137,7 @@
                 <label class="free">2 months free</label>
               </div>
             </div>
-            <div class="card">
+            <div class="card" id="cardSix">
               <img src="images/icon-pro.svg" alt="">
               <div class="plan-texted">
                 <p class="plan-text">Pro</p>
@@ -149,7 +149,7 @@
           <div class="on-off">
             <div class="monthly on">Monthly</div>
             <div class="check">
-              <input type="checkbox">
+              <input type="checkbox" id="slider">
               <span class="boot round"></span>
             </div>
             <p class="yearly">Yearly</p>
@@ -172,8 +172,8 @@
         </div>
 
         <div class="add-ons-box" id="month">
-          <div class="add-ons ad-selected" data-id="1">
-            <input type="checkbox" id="online">
+          <div class="add-ons ad" data-id="1">
+            <input type="checkbox" id="online" class="onlineMonth">
             <div class="text">
               <h4>Online service</h4>
               <small>Access to multiplayer games</small>
@@ -181,7 +181,7 @@
             <p class="price">+$1/mo</p>
           </div>
           <div class="add-ons" data-id="1">
-            <input type="checkbox" id="online">
+            <input type="checkbox" id="online" class="storageMonth">
             <div class="text">
               <h4>Larger storage</h4>
               <small>Extra 1TB of cloud save</small>
@@ -189,7 +189,7 @@
             <p class="price">$2/mo</p>
           </div>
           <div class="add-ons" data-id="1">
-            <input type="checkbox" id="online">
+            <input type="checkbox" id="online" class="customizableMonth">
             <div class="text">
               <h4>Customizable profile</h4>
               <small>Custom theme on your profile</small>
@@ -198,8 +198,8 @@
           </div>
         </div>
         <div class="add-ons-box" id="year">
-          <div class="add-ons ad-selected" data-id="1">
-            <input type="checkbox" id="online">
+          <div class="add-ons ad" data-id="1">
+            <input type="checkbox" id="online" class="onlineYear">
             <div class="text">
               <h4>Online service</h4>
               <small>Access to multiplayer games</small>
@@ -207,7 +207,7 @@
             <p class="price">+$10/yr</p>
           </div>
           <div class="add-ons" data-id="1">
-            <input type="checkbox" id="online">
+            <input type="checkbox" id="online" class="storageYear">
             <div class="text">
               <h4>Larger storage</h4>
               <small>Extra 1TB of cloud save</small>
@@ -215,7 +215,7 @@
             <p class="price">+$20/yr</p>
           </div>
           <div class="add-ons" data-id="1">
-            <input type="checkbox" id="online">
+            <input type="checkbox" id="online" class="customizableYear">
             <div class="text">
               <h4>Customizable profile</h4>
               <small>Custom theme on your profile</small>
@@ -243,7 +243,7 @@
           <div class="box">
             <div class="finish-plan">
               <p class="plan-text" id="finishPlan">Choose a plan <a href="" class="active">Change</a></p>
-              <p class="plan-price">+$0/</p>
+              <p class="plan-price" id="finishPrice">+$0/</p>
             </div>
             <hr>
             <div class="finish-add-ons"> 
@@ -251,18 +251,24 @@
                 <div class="text">
                   <h5>Online service</h5>
                 </div>
-                <p class="price">+$0/</p>              
+                <p class="price" id="onlinePrice">+$0/</p>              
               </div>
               <div class="addons">
                 <div class="text">
                   <h5>Larger storage</h5>
                 </div>
-                <p class="price">+$0/</p>              
+                <p class="price" id="storagePrice">+$0/</p>              
+              </div>
+              <div class="addons">
+                <div class="text">
+                  <h5>Customizable profile</h5>
+                </div>
+                <p class="price" id="customizablePrice">+$0/</p>              
               </div>
             </div>
           </div>
           <div class="total">
-            <p class="total-text">Total $</p>
+            <p class="total-text">Total</p>
             <p class="total-price"></p>
           </div>
         </div>
