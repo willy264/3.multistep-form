@@ -51,6 +51,9 @@
             
       </div>
 
+
+
+      
       <div class="step-form step1">
         <div class="header">
           <h1>Personal info</h1>
@@ -84,13 +87,17 @@
         </div>
       </div>
 
+
+
+
       <div class="step-form step2">
         <div class="header">
           <h1>Select your plan</h1>
           <p>You have the option of monthly or yearly billing</p>
         </div>
+
         <div class="cards">
-          <div class="plan-cards">
+          <div class="plan-cards" id="planMonth">
             <div class="card selected">
               <img src="images/icon-arcade.svg" alt="">
               <div class="plan-texted">
@@ -113,6 +120,32 @@
               </div>
             </div>
           </div>
+          <div class="plan-cards" id="planYear">
+            <div class="card selected">
+              <img src="images/icon-arcade.svg" alt="">
+              <div class="plan-texted">
+                <p class="plan-text">Arcade</p>
+                <span class="plan-price">$90/yr</span>
+                <label class="free">2 months free</label>
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/icon-advanced.svg" alt="">
+              <div class="plan-texted">
+                <p class="plan-text">Advanced</p>
+                <span class="plan-price">$120/yr</span>
+                <label class="free">2 months free</label>
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/icon-pro.svg" alt="">
+              <div class="plan-texted">
+                <p class="plan-text">Pro</p>
+                <span class="plan-price">$150/yr</span>
+                <label class="free">2 months free</label>
+              </div>
+            </div>
+          </div>
           <div class="on-off">
             <div class="monthly on">Monthly</div>
             <div class="check">
@@ -122,18 +155,23 @@
             <p class="yearly">Yearly</p>
           </div>  
         </div>
+
         <div class="footer">
           <button class="previous" type="button" id="prevTwo">Go Back</button>
           <button class="next" type="submit" id="btnTwo">Next Step</button>
         </div>
       </div>
 
+
+
+
       <div class="step-form step3">
         <div class="header">
           <h1>Pick add-ons</h1>
           <p>Add-ons help enhance your gaming experience</p>
         </div>
-        <div class="add-ons-box">
+
+        <div class="add-ons-box" id="month">
           <div class="add-ons ad-selected" data-id="1">
             <input type="checkbox" id="online">
             <div class="text">
@@ -148,7 +186,7 @@
               <h4>Larger storage</h4>
               <small>Extra 1TB of cloud save</small>
             </div>
-            <p class="price"></p>
+            <p class="price">$2/mo</p>
           </div>
           <div class="add-ons" data-id="1">
             <input type="checkbox" id="online">
@@ -156,14 +194,46 @@
               <h4>Customizable profile</h4>
               <small>Custom theme on your profile</small>
             </div>
-            <p class="price"></p>
+            <p class="price">$2/mo</p>
           </div>
         </div>
+        <div class="add-ons-box" id="year">
+          <div class="add-ons ad-selected" data-id="1">
+            <input type="checkbox" id="online">
+            <div class="text">
+              <h4>Online service</h4>
+              <small>Access to multiplayer games</small>
+            </div>
+            <p class="price">+$10/yr</p>
+          </div>
+          <div class="add-ons" data-id="1">
+            <input type="checkbox" id="online">
+            <div class="text">
+              <h4>Larger storage</h4>
+              <small>Extra 1TB of cloud save</small>
+            </div>
+            <p class="price">+$20/yr</p>
+          </div>
+          <div class="add-ons" data-id="1">
+            <input type="checkbox" id="online">
+            <div class="text">
+              <h4>Customizable profile</h4>
+              <small>Custom theme on your profile</small>
+            </div>
+            <p class="price">+$20/yr</p>
+          </div>
+        </div>
+
         <div class="footer">
           <button class="previous" type="button" id="prevThree">Go Back</button>
           <button class="next" type="submit" id="btnThree">Next Step</button>
         </div>
       </div>
+
+
+
+
+
       <div class="step-form step4">
         <div class="header">
           <h1>Finishing up</h1>
@@ -172,8 +242,8 @@
         <div class="finish-box">
           <div class="box">
             <div class="finish-plan">
-              <p class="plan-text">Arcade(Monthly) <a href="" class="active">Change</a></p>
-              <p class="plan-price">$9/mo</p>
+              <p class="plan-text" id="finishPlan">Choose a plan <a href="" class="active">Change</a></p>
+              <p class="plan-price">+$0/</p>
             </div>
             <hr>
             <div class="finish-add-ons"> 
@@ -181,19 +251,19 @@
                 <div class="text">
                   <h5>Online service</h5>
                 </div>
-                <p class="price">+$1/mo</p>              
+                <p class="price">+$0/</p>              
               </div>
               <div class="addons">
                 <div class="text">
                   <h5>Larger storage</h5>
                 </div>
-                <p class="price">+$2/mo</p>              
+                <p class="price">+$0/</p>              
               </div>
             </div>
           </div>
           <div class="total">
-            <p class="total-text">Total(per month)</p>
-            <p class="total-price">+$12/mo</p>
+            <p class="total-text">Total $</p>
+            <p class="total-price"></p>
           </div>
         </div>
         <div class="footer">
@@ -201,6 +271,11 @@
           <button class="next" type="submit" id="btnFour">Confirm</button>
         </div>
       </div>
+
+
+
+
+
       <div class="step-form step5">
         <img src="images/icon-thank-you.svg" alt="" />
         <div class="header">
