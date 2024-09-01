@@ -60,27 +60,27 @@
           <div class="nameInput">
             <div class="label">
               <label for="name">Name</label>
-              <p class="error">This field is required</p>
+              <p class="error nameError"></p>
             </div>
             <input type="text" placeholder="e.g. Stephen King" id="name" required>            
           </div>
           <div class="nameInput">
             <div class="label">
               <label for="email">Email Address</label>
-              <p class="error">This field is required</p>
+              <p class="error emailError"></p>
             </div>
             <input type="text" placeholder="e.g. stephenking@lorem.com" id="email" required/>
           </div>
           <div class="nameInput">
             <div class="label">
               <label for="number">Phone Number</label>
-              <p class="error">This field is required</p>
+              <p class="error numberError"></p>
             </div>
             <input type="tel" placeholder="e.g. +1 234 567 890" id="number" required/>
           </div>
         </form>
         <div class="footer">
-          <button type="submit" class="next">Next Step</button>
+          <button type="submit" class="next stepTwo">Next Step</button>
         </div>
       </div>
 
@@ -134,7 +134,7 @@
           <p>Add-ons help enhance your gaming experience</p>
         </div>
         <div class="add-ons-box">
-          <div class="add-ons" data-id="1">
+          <div class="add-ons ad-selected" data-id="1">
             <input type="checkbox" id="online">
             <div class="text">
               <h4>Online service</h4>
@@ -172,7 +172,7 @@
         <div class="finish-box">
           <div class="box">
             <div class="finish-plan">
-              <p class="plan-text">Arcade(Monthly) <a href="">Change</a></p>
+              <p class="plan-text">Arcade(Monthly) <a href="" class="active">Change</a></p>
               <p class="plan-price">$9/mo</p>
             </div>
             <hr>

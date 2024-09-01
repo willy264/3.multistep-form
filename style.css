@@ -121,7 +121,7 @@ body {
 /* =========== STEP 1 =========== */
 .step1 {
   width: 90%;
-  display: none;
+  display: grid;
   grid-template-rows: 100px 350px 80px;
   grid-template-columns: 1fr 20px;
   align-content: center;
@@ -184,7 +184,7 @@ form .error {
 }
 .step2 {
   width: 90%;
-  display: grid;
+  display: none;
   grid-template-rows: 100px 350px 80px;
   align-content: center;
   padding-right: 20px;
@@ -401,6 +401,9 @@ input:checked + .boot::before {
   cursor: pointer;
   font-weight: 500;
 }
+.step4 .box .finish-plan .plan-text a.active {
+  color: var(--Purplish-blue);
+}
 .step4 .box .finish-plan .plan-price {
   font-weight: 700;
 }
@@ -459,6 +462,11 @@ input:checked + .boot::before {
 
 
 @media (max-width: 800px) {
+  /* .footer {
+    position: fixed;
+    bottom: 0;
+    background-color: var(--White);
+  } */
   .container {
     top: 25%;
     max-width: fit-content;
@@ -489,6 +497,60 @@ input:checked + .boot::before {
     display: none;
   }
 
+  .plan-cards {
+    margin-top: 20px;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .plan-cards .card {
+    width: 100%;
+    height: fit-content;
+    flex-direction: row;
+    justify-content: start;
+    gap: 20px;
+    padding: 10px;
+  }
+  .on-off {
+    border-radius: 8px;
+    padding: 15px;
+    background-color: var(--Alabaster);
+  }
 
+  .step1 {
+    width: 100%;
+  }
 
+  .step3 .add-ons-box {
+    width: 100%;
+  }
+
+  .step4 .finish-box {
+    width: 100%;
+  }
+
+  .step5 {
+    height: 500px;
+    padding: 50px;
+    grid-template-columns: 300px;
+  }
+
+}
+
+@media (max-width: 500px) {
+  .header {
+    font-size: 15px;
+  }
+  .step2 {
+    width: 100%;
+  }
+  .step3 {
+    width: 100%;
+  }
+  .step4 {
+    width: 100%;
+  }
+  .step5 {
+    width: 100%;
+    grid-template-columns: auto;
+  }
 }
