@@ -84,7 +84,7 @@ changeBtn.addEventListener('click', () => {
   const addOns = document.querySelectorAll('#online').forEach(radio => {
     if (radio.checked) {
       const planPrice = document.querySelector(".total-price").innerHTML;
-      document.querySelector(".total-price").innerHTML = parseInt(planPrice) - parseInt(radio.value);
+      document.querySelector(".total-price").innerHTML =`${ parseInt(planPrice) - parseInt(radio.value)} $`;
     }
   })
 })
