@@ -173,7 +173,6 @@ function checkPrevCard() {
   } 
 }
 
-
 checkBox = document.querySelector('#cardOne').addEventListener('click', () => {
   cardClicked('#cardOne')
 
@@ -220,7 +219,10 @@ checkBox = document.querySelector("#cardSix").addEventListener("click", () => {
 
 
 
-checkBox = document.querySelector(".onlineMonth").addEventListener("click", event => {
+checkBox = document.querySelector(".addOne").addEventListener("click", event => {
+  // document.querySelector('.addOne').style.border = '2px solid var(--Purplish-blue)'
+  // document.querySelector("#onlinePrice").innerHTML = "+1$/mo";
+  // document.querySelector(".total-text").innerHTML = "Total (per month)";
   if (event.target.checked) {
     document.querySelector("#onlinePrice").innerHTML = "+1$/mo";
     document.querySelector(".total-text").innerHTML = "Total (per month)";
@@ -270,12 +272,12 @@ checkBox = document.querySelector('.customizableYear').addEventListener("click",
 });
 
 resetBtn.addEventListener('click', () =>  {
-  document.querySelector("#onlineMonth").checked = false;
-  document.querySelector("#storageMonth").checked = false;
-  document.querySelector("#customizableMonth").checked = false;
-  document.querySelector("#onlineYear").checked = false;
-  document.querySelector("#storageYear").checked = false;
-  document.querySelector("#customizableYear").checked = false;
+  document.querySelector(".onlineMonth").checked = false,
+  document.querySelector(".storageMonth").checked = false,
+  document.querySelector(".customizableMonth").checked = false,
+  document.querySelector(".onlineYear").checked = false,
+  document.querySelector(".storageYear").checked = false,
+  document.querySelector(".customizableYear").checked = false;
 
   document.querySelector("#onlinePrice").innerHTML = "+0$";
   document.querySelector("#storagePrice").innerHTML = "+0$";
@@ -283,19 +285,6 @@ resetBtn.addEventListener('click', () =>  {
 
   document.querySelector('#finishPlan').innerHTML == 'Choose a plan';
   document.querySelector("#finishPrice").innerHTML = "0$";
-  
-  cardOne.style.backgroundColor = "var(--White)";
-  cardOne.style.border = " solid 1px var(--Light-gray)";
-  cardThree.style.backgroundColor = "var(--White)";
-  cardThree.style.border = " solid 1px var(--Light-gray)";
-  cardTwo.style.backgroundColor = "var(--White)";
-  cardTwo.style.border = " solid 1px var(--Light-gray)";
-  cardFour.style.backgroundColor = "var(--White)";
-  cardFour.style.border = " solid 1px var(--Light-gray)";
-  cardFive.style.backgroundColor = "var(--White)";
-  cardFive.style.border = " solid 1px var(--Light-gray)";
-  cardSix.style.backgroundColor = "var(--White)";
-  cardSix.style.border = " solid 1px var(--Light-gray)";
 })
 
 
