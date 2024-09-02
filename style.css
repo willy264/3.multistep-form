@@ -221,6 +221,10 @@ form .error {
   border-radius: 7px;
   cursor: pointer;
 }
+.plan-cards .card.clicked {
+  background-color: var(--Magnolia);
+  border: 2px solid var(--Purplish-blue);
+}
 .plan-cards#planYear {
   display: none;
   height: 200px;
@@ -252,6 +256,7 @@ form .error {
   gap: 8px;
   padding: 8px;
   margin-bottom: 80px;
+  border-radius: 10px;
 }
 .monthly, .yearly {
   color: var(--Cool-gray);
@@ -416,8 +421,12 @@ input:checked + .boot::before {
   cursor: pointer;
   font-weight: 500;
 }
-.step4 .box .finish-plan .plan-text a.active {
+.step4 .box .finish-plan i.active {
   color: var(--Purplish-blue);
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 5px;
+  text-decoration: underline;
 }
 .step4 .box .finish-plan .plan-price {
   font-weight: 700;

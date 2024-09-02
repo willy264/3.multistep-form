@@ -69,12 +69,8 @@ btnThree.addEventListener('click', () => {
   
   const addOns = document.querySelectorAll('#online').forEach(radio => {
     if (radio.checked) {
-      console.log(radio.value);
-      console.log(document.querySelector(".total-price").innerHTML);
       const planPrice = document.querySelector(".total-price").innerHTML;
-      console.log(planPrice);
       document.querySelector(".total-price").innerHTML = `${parseInt(planPrice) + parseInt(radio.value)} $`;
-      console.log(radio.value)
     }
   })
 })
@@ -85,7 +81,7 @@ changeBtn.addEventListener('click', () => {
   circleFour.classList.remove('selected')
   circleTwo.classList.add('selected')
 
-  const addOns = document.querySelector('#online').forEach(radio => {
+  const addOns = document.querySelectorAll('#online').forEach(radio => {
     if (radio.checked) {
       const planPrice = document.querySelector(".total-price").innerHTML;
       document.querySelector(".total-price").innerHTML = parseInt(planPrice) - parseInt(radio.value);
@@ -129,12 +125,9 @@ prevFour.addEventListener('click', () => {
   circleThree.classList.add('selected')
   circleFour.classList.remove('selected')
 
-  const addOns = document.querySelector('#online').forEach(radio => {
+  const addOns = document.querySelectorAll('#online').forEach(radio => {
     if (radio.checked) {
-      console.log(radio.value);
-      console.log(document.querySelector(".total-price").innerHTML);
       const planPrice = document.querySelector(".total-price").innerHTML;
-      console.log(planPrice);
       document.querySelector(".total-price").innerHTML = `${parseInt(planPrice) - parseInt(radio.value)}$`;
     }
   })
@@ -164,117 +157,60 @@ checkBox = document.querySelector('.slider').addEventListener('click', event => 
   }
 })
 
+function cardClicked(selector) {
+  const checkCard = document.querySelector(selector)
+  if (!checkCard.classList.contains('clicked')) {
+    checkPrevCard()
+    checkCard.classList.add('clicked')
+  } else {
+    checkCard.classList.remove('clicked')
+  }
+}
+function checkPrevCard() {
+  const prevButCheck = document.querySelector('.clicked')
+  if (prevButCheck) {
+    prevButCheck.classList.remove('clicked')
+  } 
+}
 
 
 checkBox = document.querySelector('#cardOne').addEventListener('click', () => {
-  cardOne.style.backgroundColor = "var(--Magnolia)";
-  cardOne.style.border = " solid 1px var(--Purplish-blue)";
-
-  cardTwo.style.backgroundColor = "var(--White)";
-  cardTwo.style.border = " solid 1px var(--Light-gray)";
-  cardThree.style.backgroundColor = "var(--White)";
-  cardThree.style.border = " solid 1px var(--Light-gray)";
-  cardFour.style.backgroundColor = "var(--White)";
-  cardFour.style.border = " solid 1px var(--Light-gray)";
-  cardFive.style.backgroundColor = "var(--White)";
-  cardFive.style.border = " solid 1px var(--Light-gray)";
-  cardSix.style.backgroundColor = "var(--White)";
-  cardSix.style.border = " solid 1px var(--Light-gray)";
+  cardClicked('#cardOne')
 
   document.querySelector("#finishPlan").innerHTML = "Arcade (monthly)";
   document.querySelector("#finishPrice").innerHTML = "9$/mo";
   document.querySelector(".total-text").innerHTML = "Total (per month)";
 })
 checkBox = document.querySelector("#cardTwo").addEventListener("click", () => {
-  cardTwo.style.backgroundColor = "var(--Magnolia)";
-  cardTwo.style.border = " solid 1px var(--Purplish-blue)";
-
-  cardOne.style.backgroundColor = "var(--White)";
-  cardOne.style.border = " solid 1px var(--Light-gray)";
-  cardThree.style.backgroundColor = "var(--White)";
-  cardThree.style.border = " solid 1px var(--Light-gray)";
-  cardFour.style.backgroundColor = "var(--White)";
-  cardFour.style.border = " solid 1px var(--Light-gray)";
-  cardFive.style.backgroundColor = "var(--White)";
-  cardFive.style.border = " solid 1px var(--Light-gray)";
-  cardSix.style.backgroundColor = "var(--White)";
-  cardSix.style.border = " solid 1px var(--Light-gray)";
+  cardClicked('#cardTwo')
 
   document.querySelector("#finishPlan").innerHTML = "Advanced (monthly)";
   document.querySelector("#finishPrice").innerHTML = "12$/mo";
   document.querySelector(".total-text").innerHTML = "Total (per month)";
 });
 checkBox = document .querySelector("#cardThree").addEventListener("click", ()=> {
-  cardThree.style.backgroundColor = "var(--Magnolia)";
-  cardThree.style.border = " solid 1px var(--Purplish-blue)";
-
-  cardTwo.style.backgroundColor = "var(--White)";
-  cardTwo.style.border = " solid 1px var(--Light-gray)";
-  cardOne.style.backgroundColor = "var(--White)";
-  cardOne.style.border = " solid 1px var(--Light-gray)";
-  cardFour.style.backgroundColor = "var(--White)";
-  cardFour.style.border = " solid 1px var(--Light-gray)";
-  cardFive.style.backgroundColor = "var(--White)";
-  cardFive.style.border = " solid 1px var(--Light-gray)";
-  cardSix.style.backgroundColor = "var(--White)";
-  cardSix.style.border = " solid 1px var(--Light-gray)";
+  cardClicked('#cardThree')
 
   document.querySelector("#finishPlan").innerHTML = "Pro (monthly)";
   document.querySelector("#finishPrice").innerHTML = "15$/mo";
   document.querySelector(".total-text").innerHTML = "Total (per month)";
 });
 checkBox = document.querySelector("#cardFour").addEventListener("click", () => {
-  cardFour.style.backgroundColor = "var(--Magnolia)";
-  cardFour.style.border = " solid 1px var(--Purplish-blue)";
-
-  cardOne.style.backgroundColor = "var(--White)";
-  cardOne.style.border = " solid 1px var(--Light-gray)";
-  cardThree.style.backgroundColor = "var(--White)";
-  cardThree.style.border = " solid 1px var(--Light-gray)";
-  cardTwo.style.backgroundColor = "var(--White)";
-  cardTwo.style.border = " solid 1px var(--Light-gray)";
-  cardFive.style.backgroundColor = "var(--White)";
-  cardFive.style.border = " solid 1px var(--Light-gray)";
-  cardSix.style.backgroundColor = "var(--White)";
-  cardSix.style.border = " solid 1px var(--Light-gray)";
+  cardClicked('#cardFour')
 
   document.querySelector("#finishPlan").innerHTML = "Arcade (yearly)";
   document.querySelector("#finishPrice").innerHTML = "90$/yr";
   document.querySelector(".total-text").innerHTML = "Total (per year)";
 });
 checkBox = document.querySelector("#cardFive").addEventListener("click", () => {
-  cardFive.style.backgroundColor = "var(--Magnolia)";
-  cardFive.style.border = " solid 1px var(--Purplish-blue)";
-
-  cardTwo.style.backgroundColor = "var(--White)";
-  cardTwo.style.border = " solid 1px var(--Light-gray)";
-  cardThree.style.backgroundColor = "var(--White)";
-  cardThree.style.border = " solid 1px var(--Light-gray)";
-  cardOne.style.backgroundColor = "var(--White)";
-  cardOne.style.border = " solid 1px var(--Light-gray)";
-  cardFour.style.backgroundColor = "var(--White)";
-  cardFour.style.border = " solid 1px var(--Light-gray)";
-  cardSix.style.backgroundColor = "var(--White)";
-  cardSix.style.border = " solid 1px var(--Light-gray)";
+  cardClicked('#cardFive')
 
   document.querySelector("#finishPlan").innerHTML = "Advanced (yearly)";
   document.querySelector("#finishPrice").innerHTML = "12O$/yr";
   document.querySelector(".total-text").innerHTML = "Total (per year)";
 });
 checkBox = document.querySelector("#cardSix").addEventListener("click", () => {
-  cardSix.style.backgroundColor = "var(--Magnolia)";
-  cardSix.style.border = " solid 1px var(--Purplish-blue)";
-
-  cardOne.style.backgroundColor = "var(--White)";
-  cardOne.style.border = " solid 1px var(--Light-gray)";
-  cardThree.style.backgroundColor = "var(--White)";
-  cardThree.style.border = " solid 1px var(--Light-gray)";
-  cardTwo.style.backgroundColor = "var(--White)";
-  cardTwo.style.border = " solid 1px var(--Light-gray)";
-  cardFour.style.backgroundColor = "var(--White)";
-  cardFour.style.border = " solid 1px var(--Light-gray)";
-  cardFive.style.backgroundColor = "var(--White)";
-  cardFive.style.border = " solid 1px var(--Light-gray)";
+  cardClicked('#cardSix')
 
   document.querySelector("#finishPlan").innerHTML = "Pro (yearly)";
   document.querySelector("#finishPrice").innerHTML = "150$/yr";
