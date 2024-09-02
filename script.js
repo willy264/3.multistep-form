@@ -57,13 +57,15 @@ btnTwo.addEventListener('click', () => {
     document.querySelector(".total-text").innerHTML = "0";
   }
   checkPlan();
+  circleTwo.classList.remove('selected')
+  circleThree.classList.add('selected')
 })
 
 btnThree.addEventListener('click', () => {
   stepFour.style.display = 'grid';
   stepThree.style.display = 'none';
-  circleThree.style.color = "var(--Marine-blue)";
-  circleThree.style.backgroundColor = "var(--Light-blue)";
+  circleThree.classList.remove('selected')
+  circleFour.classList.add('selected')
   
   const addOns = document.querySelectorAll('#online').forEach(radio => {
     if (radio.checked) {
@@ -80,17 +82,12 @@ btnThree.addEventListener('click', () => {
 changeBtn.addEventListener('click', () => {
   stepTwo.style.display = 'grid';
   stepFour.style.display = 'none';
-  circleTwo.style.color = "var(--Marine-blue)";
-  circleTwo.style.backgroundColor = "var(--Light-blue)";
-  circleFour.style.color = "var(--White)";
-  circleFour.style.backgroundColor = "transparent";
+  circleFour.classList.remove('selected')
+  circleTwo.classList.add('selected')
 
   const addOns = document.querySelector('#online').forEach(radio => {
     if (radio.checked) {
-      console.log(radio.value);
-      console.log(document.querySelector(".total-price").innerHTML);
       const planPrice = document.querySelector(".total-price").innerHTML;
-      console.log(planPrice);
       document.querySelector(".total-price").innerHTML = parseInt(planPrice) - parseInt(radio.value);
     }
   })
@@ -103,8 +100,7 @@ btnFour.addEventListener('click', () => {
   } else {
     stepFour.style.display = 'none';
     stepFive.style.display = 'grid';
-    circleFour.style.color = "var(--Marine-blue)";
-    circleFour.style.backgroundColor = "var(--Light-blue)";
+    circleFour.classList.add('selected')
   }
 })
 
@@ -118,20 +114,20 @@ btnFour.addEventListener('click', () => {
 prevTwo.addEventListener('click', () => {
   stepOne.style.display = 'grid';
   stepTwo.style.display = 'none';
-  circleOne.style.backgroundColor = 'transparent'
-  circleOne.style.color = 'var(--White)'
+  circleOne.classList.add('selected')
+  circleTwo.classList.remove('selected')
 })
 prevThree.addEventListener('click', () => {
   stepTwo.style.display = 'grid';
   stepThree.style.display = 'none';
-  circleTwo.style.backgroundColor = 'transparent'
-  circleTwo.style.color = 'var(--White)'
+  circleTwo.classList.add('selected')
+  circleThree.classList.remove('selected')
 })
 prevFour.addEventListener('click', () => {
   stepThree.style.display = 'grid';
   stepFour.style.display = 'none';
-  circleThree.style.backgroundColor = 'transparent'
-  circleThree.style.color = 'var(--White)';
+  circleThree.classList.add('selected')
+  circleFour.classList.remove('selected')
 
   const addOns = document.querySelector('#online').forEach(radio => {
     if (radio.checked) {
@@ -373,17 +369,9 @@ function checkPlan() {
   if (document.querySelector('#finishPlan').innerHTML == 'Choose a plan') {
     stepOne.style.display = 'none';
     stepTwo.style.display = 'grid';
-
-    circleOne.style.color = "var(--White)";
-    circleOne.style.backgroundColor = "rgba(255, 255, 255, 0)";
-    circleTwo.style.backgroundColor = "rgb(255, 255, 255)";
-    circleTwo.style.color = "black";  
   } else {
     stepTwo.style.display = "none";
     stepThree.style.display = "grid";
-    
-    circleTwo.style.color = "var(--Marine-blue)";
-    circleTwo.style.backgroundColor = "var(--Light-blue)";
   }
 }
 
@@ -441,12 +429,8 @@ function Achieve() {
     stepOne.style.display = 'none';
     stepTwo.style.display = 'grid';
 
-    circleOne.style.color = "var(--White)";
-    circleOne.style.backgroundColor = "#64646400";
-    circleOne.style.border = '2px solid var(--White)';
-    circleTwo.style.color = "var(--Marine-blue)";
-    circleTwo.style.backgroundColor = "var(--Light-blue)";
-    circleTwo.style.border = 'none'
+    circleOne.classList.remove('selected')
+    circleTwo.classList.add('selected')
   }
 }
 

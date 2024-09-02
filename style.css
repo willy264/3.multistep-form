@@ -68,7 +68,6 @@ body {
   border-radius: 50%;
   border: 2px solid var(--White);
   display: flex;
-  background-color: #64646400;
   justify-content: center;
   align-items: center;
   font-weight: 700;
@@ -485,7 +484,7 @@ input:checked + .boot::before {
   } */
   .container {
     margin-top: 200px;
-    padding-left: 40px;
+    padding-left: 0;
     max-width: fit-content;
     background-color: white;
   }
@@ -520,6 +519,7 @@ input:checked + .boot::before {
   }
   .step1 {
     gap: 30px;
+    padding-left: 40px;
   }
 
   .step2 {
@@ -558,6 +558,9 @@ input:checked + .boot::before {
     width: 100%;
   }
 
+  .step4 {
+    grid-template-rows: 150px 350px 80px;
+  }
   .step4 .finish-box {
     width: 100%;
   }
@@ -586,6 +589,7 @@ input:checked + .boot::before {
   .step1 {
     grid-template-columns: 1fr;
     row-gap: 100px;
+    padding-left: 0;
   }
   .form .error {
     display: none;
